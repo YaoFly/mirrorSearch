@@ -16,11 +16,11 @@ public class MirrorServer {
 
     private int port;
 
-    public MirrorServer(int port) {
+    private MirrorServer(int port) {
         this.port = port;
     }
 
-    public void run() throws Exception {
+    private void run() throws Exception {
         EventLoopGroup bossGroup = new NioEventLoopGroup(1); // (1)
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         try {
